@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Coffee Yönetim Paneli</title>
+
+    <!-- SWIPER KÜTÜPHANESİ -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- FONT AWESOME ICON KÜTÜPHANESİ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- ÖZEL CSS DOSYASI -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR AÇIKKEN ARKA PLANI KAPLAYACAK OLAN KATMAN -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- YÖNETİCİ KENAR ÇUBUĞU (SIDEBAR) -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="#" class="logo">coffee <i class="fas fa-mug-hot"></i></a>
+            <div id="close-sidebar" class="fas fa-times"></div>
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="active"><a href="#home"><i class="fas fa-chart-pie"></i> <span>Ana Panel</span></a></li>
+            <li><a href="#tables-view"><i class="fas fa-th-large"></i> <span>Bölgeler ve Masalar</span></a></li>
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-pencil-ruler"></i> <span>Menü Oluştur</span> <i class="fas fa-chevron-down submenu-arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="#menu-editor-view">Menü Düzenle</a></li>
+                    <li><a href="#qr-menu-view">QR Menü</a></li>
+                </ul>
+            </li>
+             
+           <!-- YENİ KODU BURAYA YAPIŞTIRIN -->
+             <li class="has-submenu">
+                    <a href="#" id="siparis-yonetimi-menu">
+                        <i class="fas fa-bell"></i> 
+                        <span>Sipariş Yönetimi</span> 
+                        <i class="fas fa-chevron-down submenu-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#siparis-akisi-view">Sipariş Akışı (Kanban)</a></li>
+                        <li><a href="#paket-servis-view">Paket Servis</a></li>
+                        <li><a href="#hazir-siparisler-view">Hazır Siparişler</a></li>
+                    </ul>
+            </li>
+                            <li><a href="#"><i class="fas fa-utensils"></i> <span>Mutfak Ekranı (KDS)</span></a></li>
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-clipboard-list"></i> <span>Operasyonel İşlemler</span> <i class="fas fa-chevron-down submenu-arrow"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Stok Yönetimi</a></li>
+                    <li><a href="#">Tedarikçiler</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> <span>Raporlama & Analiz</span></a></li>
+            <li><a href="#"><i class="fas fa-users"></i> <span>Kullanıcı Yönetimi</span></a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i> <span>Sistem Ayarları</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- ANA İÇERİK BÖLÜMÜ -->
+    <main class="main-wrapper">
+        <!-- SAYFA BAŞLIĞI (HEADER) -->
+        <header class="header">
+            <div class="header-left">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div class="page-title-container">
+                    <h1 class="page-title" id="page-title-text">Ana Panel</h1>
+                </div>
+            </div>
+            <a href="#" class="logo">coffee <i class="fas fa-mug-hot"></i></a>
+            <div id="header-actions">
+                <a href="#" class="btn" id="main-action-btn">Book a Table</a>
+            </div>
+        </header>
+
+        <!-- GÖRÜNÜM 1: ANA PANEL (Esas projenin ana içeriği) -->
+        <div class="view" id="home">
+            <!-- HOME BÖLÜMÜ -->
+            <section class="home" id="home-content">
+                <div class="row">
+                    <div class="content">
+                        <h3>fresh coffee in the morning</h3>
+                        <a href="#" class="btn">buy one now</a>
+                    </div>
+                    <div class="image">
+                        <img src="image/home-img-1.png" class="main-home-image" alt="Kahve Bardağı">
+                    </div>
+                </div>
+                <div class="image-slider">
+                    <img src="image/home-img-1.png" alt="Kahve Bardağı 1">
+                    <img src="image/home-img-2.png" alt="Kahve Kupası">
+                    <img src="image/home-img-3.png" alt="Fincanda Kahve">
+                </div>
+            </section>
+
+            <!-- ABOUT BÖLÜMÜ -->
+            <section class="about" id="about">
+                <h1 class="heading">about us <span>why choose us</span></h1>
+                <div class="row">
+                    <div class="image">
+                        <img src="image/about-img.png" alt="Baristalar">
+                    </div>
+                    <div class="content">
+                        <h3 class="title">what's make our coffee special!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum laboriosam reprehenderit ipsa id
+                            repellat odio illum, voluptas, necessitatibus assumenda adipisci. Hic, maiores iste? Excepturi illo
+                            dolore mollitia qui quia.</p>
+                        <a href="#" class="btn">read more</a>
+                        <div class="icons-container">
+                            <div class="icons">
+                                <img src="image/about-icon-1.png" alt="Kaliteli Kahve İkonu">
+                                <h3>quality coffee</h3>
+                            </div>
+                            <div class="icons">
+                                <img src="image/about-icon-2.png" alt="Şubelerimiz İkonu">
+                                <h3>our branches</h3>
+                            </div>
+                            <div class="icons">
+                                <img src="image/about-icon-3.png" alt="Ücretsiz Teslimat İkonu">
+                                <h3>free delivery</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MENU BÖLÜMÜ -->
+            <section class="menu" id="menu">
+                <h1 class="heading">our menu <span>popular menu</span></h1>
+                <div class="box-container">
+                    <a href="#" class="box">
+                        <img src="image/menu-1.png" alt="Menü Ürünü 1">
+                        <div class="content"><h3>our special coffee</h3><p>Lorem ipsum dolor sit amet.</p><span>$8.99</span></div>
+                    </a>
+                    <a href="#" class="box">
+                        <img src="image/menu-2.png" alt="Menü Ürünü 2">
+                        <div class="content"><h3>our special coffee</h3><p>Lorem, ipsum dolor sit amet.</p><span>$8.99</span></div>
+                    </a>
+                    <a href="#" class="box">
+                        <img src="image/menu-3.png" alt="Menü Ürünü 3">
+                        <div class="content"><h3>our special coffee</h3><p>Lorem ipsum dolor sit amet.</p><span>$8.99</span></div>
+                    </a>
+                    <a href="#" class="box">
+                        <img src="image/menu-4.png" alt="Menü Ürünü 4">
+                        <div class="content"><h3>our special coffee</h3><p>Lorem ipsum dolor sit amet.</p><span>$8.99</span></div>
+                    </a>
+                    <a href="#" class="box">
+                        <img src="image/menu-5.png" alt="Menü Ürünü 5">
+                        <div class="content"><h3>our special coffee</h3><p>Lorem ipsum dolor sit amet.</p><span>$8.99</span></div>
+                    </a>
+                    <a href="#" class="box">
+                        <img src="image/menu-6.png" alt="Menü Ürünü 6">
+                        <div class="content"><h3>our special coffee</h3><p>Lorem ipsum dolor, sit amet.</p><span>$8.99</span></div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- REVIEW BÖLÜMÜ -->
+            <section class="review" id="review">
+                <h1 class="heading">reviews <span>what people says</span></h1>
+                <div class="swiper review-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide box"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i><img src="image/pic-1.png" alt="Müşteri 1"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, earum quis dolorem quaerat tenetur illum.</p><h3>john deo</h3><span>satisfied client</span></div>
+                        <div class="swiper-slide box"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i><img src="image/pic-2.png" alt="Müşteri 2"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum optio quasi ut, illo ipsam assumenda.</p><h3>john deo</h3><span>satisfied client</span></div>
+                        <div class="swiper-slide box"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i><img src="image/pic-3.png" alt="Müşteri 3"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius asperiores aliquam hic quis! Eligendi, aliquam.</p><h3>john deo</h3><span>satisfied client</span></div>
+                        <div class="swiper-slide box"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i><img src="image/pic-4.png" alt="Müşteri 4"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi modi perspiciatis distinctio velit aliquid a.</p><h3>john deo</h3><span>satisfied client</span></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- BOOK BÖLÜMÜ -->
+            <section class="book" id="book">
+                <h1 class="heading">booking <span>reserve a table</span></h1>
+                <form action=""><input type="text" placeholder="Name" class="box"><input type="email" placeholder="Email" class="box"><input type="number" placeholder="Number" class="box"><textarea name="" placeholder="Message" class="box" id="" cols="30" rows="10"></textarea><input type="submit" value="send message" class="btn"></form>
+            </section>
+
+            <!-- FOOTER BÖLÜMÜ -->
+            <section class="footer">
+                <div class="box-container">
+                    <div class="box"><h3>our branches</h3><a href="#"><i class="fas fa-arrow-right"></i> india</a><a href="#"><i class="fas fa-arrow-right"></i> USA</a><a href="#"><i class="fas fa-arrow-right"></i> france</a><a href="#"><i class="fas fa-arrow-right"></i> africa</a><a href="#"><i class="fas fa-arrow-right"></i> japan</a></div>
+                    <div class="box"><h3>quick links</h3><a href="#home"><i class="fas fa-arrow-right"></i> home</a><a href="#about"><i class="fas fa-arrow-right"></i> about</a><a href="#menu"><i class="fas fa-arrow-right"></i> menu</a><a href="#review"><i class="fas fa-arrow-right"></i> review</a><a href="#book"><i class="fas fa-arrow-right"></i> book</a></div>
+                    <div class="box"><h3>contact info</h3><a href="#"><i class="fas fa-phone"></i> +123-456-7890</a><a href="#"><i class="fas fa-phone"></i> +111-222-3333</a><a href="#"><i class="fas fa-envelope"></i> coffee@gmail.com</a><a href="#"><i class="fas fa-envelope"></i> Perú, Lima</a></div>
+                    <div class="box"><h3>contact info</h3><a href="#"><i class="fab fa-facebook-f"></i> facebook</a><a href="#"><i class="fab fa-twitter"></i> twitter</a><a href="#"><i class="fab fa-instagram"></i> instagram</a><a href="#"><i class="fab fa-linkedin"></i> linkedin</a><a href="#"><i class="fab fa-twitter"></i> twitter</a></div>
+                </div>
+                <div class="credit">created by <span>web developer</span> | all rights reserved</div>
+            </section>
+        </div>
+
+        <!-- GÖRÜNÜM 2: BÖLGELER VE MASALAR EKRANI -->
+        <section class="tables-view view view-hidden" id="tables-view">
+            <div class="tables-view-container">
+                
+                <!-- SOL BÖLÜM: MASA LİSTESİ (2/3) -->
+                <div class="tables-list-container">
+                    <div class="region-tabs-premium">
+                        <div class="region-tab-item active" data-region="deneme">Bahçe Alanı <span>5/10</span></div>
+                        <div class="region-tab-item" data-region="ornek">İç Mekan <span>8/12</span></div>
+                    </div>
+                    <!-- Bahçe Alanı Masaları -->
+                    <div class="tables-grid-premium active" data-region="deneme">
+                        <div class="table-card-premium status-full"><div class="card-main-info"><i class="fas fa-utensils card-icon"></i><div class="table-details"><h3 class="table-name">Masa B1</h3><p class="table-capacity">4 Kişilik</p></div></div><div class="card-status-info"><p class="status-text">47 Dk. Önce Açıldı</p><p class="order-total">₺618,25</p></div><a href="#" class="btn premium-btn view-order-btn">Siparişi Gör</a></div>
+                        <div class="table-card-premium status-empty"><div class="card-main-info"><i class="fas fa-coffee card-icon"></i><div class="table-details"><h3 class="table-name">Masa B2</h3><p class="table-capacity">2 Kişilik</p></div></div><div class="card-status-info"><p class="status-text empty">Müsait</p></div><a href="#" class="btn premium-btn alt">Yeni Sipariş</a></div>
+                        <div class="table-card-premium status-full"><div class="card-main-info"><i class="fas fa-utensils card-icon"></i><div class="table-details"><h3 class="table-name">Masa B3</h3><p class="table-capacity">6 Kişilik</p></div></div><div class="card-status-info"><p class="status-text">1 Saat Önce Açıldı</p><p class="order-total">₺80,00</p></div><a href="#" class="btn premium-btn view-order-btn">Siparişi Gör</a></div>
+                    </div>
+                    <!-- İç Mekan Masaları -->
+                    <div class="tables-grid-premium" data-region="ornek">
+                        <div class="table-card-premium status-full"><div class="card-main-info"><i class="fas fa-utensils card-icon"></i><div class="table-details"><h3 class="table-name">Masa I1</h3><p class="table-capacity">2 Kişilik</p></div></div><div class="card-status-info"><p class="status-text">15 Dk. Önce Açıldı</p><p class="order-total">₺125,50</p></div><a href="#" class="btn premium-btn view-order-btn">Siparişi Gör</a></div>
+                        <div class="table-card-premium status-empty"><div class="card-main-info"><i class="fas fa-coffee card-icon"></i><div class="table-details"><h3 class="table-name">Masa I2</h3><p class="table-capacity">4 Kişilik</p></div></div><div class="card-status-info"><p class="status-text empty">Müsait</p></div><a href="#" class="btn premium-btn alt">Yeni Sipariş</a></div>
+                    </div>
+                </div>
+        
+                <!-- SAĞ BÖLÜM: MEKAN KROKİSİ (1/3) -->
+                <div class="cafe-layout-container">
+                    <h3 class="layout-title" id="layout-title">Bahçe Alanı Krokisi</h3>
+                    
+                    <!-- Tüm Mekan Krokisi (Ana görünüm) -->
+                    <div class="cafe-layout" id="layout-all">
+                        <!-- Bahçe Masaları -->
+                        <div class="cafe-table table-square status-full" data-region="deneme" style="top: 5%; left: 10%;" title="Masa B1 - Dolu">B1</div>
+                        <div class="cafe-table table-round status-empty" data-region="deneme" style="top: 25%; left: 20%;" title="Masa B2 - Müsait">B2</div>
+                        <div class="cafe-table table-rectangle status-full" data-region="deneme" style="top: 5%; left: 40%;" title="Masa B3 - Dolu">B3</div>
+                        <div class="cafe-table table-round status-empty" data-region="deneme" style="top: 50%; left: 10%;" title="Masa B4 - Müsait">B4</div>
+                        <div class="cafe-table table-square status-empty" data-region="deneme" style="top: 70%; left: 30%;" title="Masa B5 - Müsait">B5</div>
+        
+                        <!-- İç Mekan Masaları -->
+                        <div class="cafe-table table-round status-full" data-region="ornek" style="top: 20%; left: 70%;" title="Masa I1 - Dolu">I1</div>
+                        <div class="cafe-table table-square status-empty" data-region="ornek" style="top: 45%; left: 65%;" title="Masa I2 - Müsait">I2</div>
+                        <div class="cafe-table table-square status-full" data-region="ornek" style="top: 45%; left: 80%;" title="Masa I3 - Dolu">I3</div>
+                        <div class="cafe-table table-rectangle status-empty" data-region="ornek" style="top: 75%; left: 60%;" title="Masa I4 - Müsait">I4</div>
+        
+                        <!-- Ayırıcı Çizgi -->
+                        <div class="layout-divider" style="left: 55%; height: 100%; width: 2px; background: rgba(0,0,0,0.1); position:absolute;"></div>
+                        <div class="layout-label" style="position:absolute; top: 1%; left: 20%; color:#888; font-size:1.4rem;">Bahçe</div>
+                        <div class="layout-label" style="position:absolute; top: 1%; left: 70%; color:#888; font-size:1.4rem;">İç Mekan</div>
+                    </div>
+                    
+                    <!-- Bahçe Alanı Krokisi -->
+                    <div class="cafe-layout active" id="layout-deneme">
+                        <div class="cafe-table table-square status-full" style="top: 20%; left: 25%;" title="Masa B1 - Dolu">B1</div>
+                        <div class="cafe-table table-round status-empty" style="top: 40%; left: 50%;" title="Masa B2 - Müsait">B2</div>
+                        <div class="cafe-table table-rectangle status-full" style="top: 20%; left: 75%;" title="Masa B3 - Dolu">B3</div>
+                        <div class="cafe-table table-round status-empty" style="top: 70%; left: 30%;" title="Masa B4 - Müsait">B4</div>
+                        <div class="cafe-table table-square status-empty" style="top: 70%; left: 70%;" title="Masa B5 - Müsait">B5</div>
+                        
+                        <!-- Bölge işareti (Kaldırıldı) -->
+                    </div>
+                    
+                    <!-- İç Mekan Krokisi -->
+                    <div class="cafe-layout" id="layout-ornek">
+                        <div class="cafe-table table-round status-full" style="top: 20%; left: 30%;" title="Masa I1 - Dolu">I1</div>
+                        <div class="cafe-table table-square status-empty" style="top: 45%; left: 50%;" title="Masa I2 - Müsait">I2</div>
+                        <div class="cafe-table table-square status-full" style="top: 20%; left: 70%;" title="Masa I3 - Dolu">I3</div>
+                        <div class="cafe-table table-rectangle status-empty" style="top: 70%; left: 50%;" title="Masa I4 - Müsait">I4</div>
+                        
+                        <!-- Bölge işareti (Kaldırıldı) -->
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- GÖRÜNÜM 3: MENÜ DÜZENLEYİCİ EKRANI -->
+        <section class="menu-editor-view view view-hidden" id="menu-editor-view">
+            <div class="menu-editor-container">
+                <div class="menu-editor-header">
+                    <div class="header-icon"><i class="fas fa-edit"></i></div>
+                    <div class="header-text">
+                        <h2>Menü Düzenleyici</h2>
+                        <p>Kategorilerinizi ve ürünlerinizi bu ekrandan kolayca yönetin.</p>
+                    </div>
+                </div>
+                <div class="menu-editor-content">
+                    <!-- Sol Panel: Kategoriler -->
+                    <div class="categories-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-tags"></i> Kategoriler</h3>
+                            <button class="btn-panel-add"><i class="fas fa-plus"></i> Ekle</button>
+                        </div>
+                        <ul class="category-list">
+                            <li class="category-item active">
+                                <i class="fas fa-grip-vertical drag-handle"></i>
+                                <span class="category-name">Kahveler</span>
+                                <div class="category-actions">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <i class="fas fa-grip-vertical drag-handle"></i>
+                                <span class="category-name">Soğuk İçecekler</span>
+                                <div class="category-actions">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <i class="fas fa-grip-vertical drag-handle"></i>
+                                <span class="category-name">Aperatifler</span>
+                                <div class="category-actions">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <i class="fas fa-grip-vertical drag-handle"></i>
+                                <span class="category-name">Tatlılar</span>
+                                <div class="category-actions">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <i class="fas fa-grip-vertical drag-handle"></i>
+                                <span class="category-name">Ana Yemekler</span>
+                                <div class="category-actions">
+                                    <i class="fas fa-pencil-alt"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sağ Panel: Ürünler -->
+                    <div class="products-panel">
+                        <div class="panel-header">
+                            <h3><i class="fas fa-mug-hot"></i> Ürünler</h3>
+                            <button class="btn-panel-add"><i class="fas fa-plus"></i> Ekle</button>
+                        </div>
+                        <div class="product-search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Seçili kategorinin ürünlerini ara...">
+                        </div>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <img src="image/menu-1.png" alt="Espresso" class="product-image">
+                                <h4 class="product-name">Espresso</h4>
+                                <p class="product-price">₺25,00</p>
+                                <div class="product-actions">
+                                    <button class="btn-product-action"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="btn-product-action btn-delete"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="image/menu-3.png" alt="Latte" class="product-image">
+                                <h4 class="product-name">Latte</h4>
+                                <p class="product-price">₺35,00</p>
+                                <div class="product-actions">
+                                    <button class="btn-product-action"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="btn-product-action btn-delete"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="image/menu-2.png" alt="Cappuccino" class="product-image">
+                                <h4 class="product-name">Cappuccino</h4>
+                                <p class="product-price">₺35,00</p>
+                                <div class="product-actions">
+                                    <button class="btn-product-action"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="btn-product-action btn-delete"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GÖRÜNÜM 4: QR MENÜ EKRANI (YENİ TASARIM) -->
+        <section class="view view-hidden" id="qr-menu-view">
+            <div class="qr-menu-page-container">
+                <!-- Sol Taraf: Ayarlar ve Önizleme -->
+                <div class="qr-settings-panel">
+                    <h3 class="panel-title">QR Menü Ayarları</h3>
+                    <div class="qr-preview-box">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://github.com/ozturk-dev&bgcolor=fdf8f8&color=443333" alt="QR Kod Önizlemesi">
+                        <p>Müşterileriniz bu kodu okutarak menünüze ulaşabilir.</p>
+                    </div>
+                    <div class="setting-group">
+                        <label for="qr-color">QR Kod Rengi</label>
+                        <input type="color" id="qr-color" value="#443333">
+                    </div>
+                    <div class="setting-group">
+                        <label for="bg-color">Arkaplan Rengi</label>
+                        <input type="color" id="bg-color" value="#fdf8f8">
+                    </div>
+                    <div class="setting-group">
+                        <label for="logo-upload">Logo Yükle (Orta Kısım)</label>
+                        <input type="file" id="logo-upload" class="file-input">
+                    </div>
+                    <div class="button-group">
+                        <a href="#" class="btn premium-btn alt"><i class="fas fa-download"></i> İndir</a>
+                        <a href="#" class="btn premium-btn"><i class="fas fa-print"></i> Yazdır</a>
+                    </div>
+                </div>
+
+                <!-- Sağ Taraf: Menü Önizlemesi -->
+                <div class="qr-menu-preview">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="menu-header">
+                                <h1 class="menu-brand-logo">coffee <i class="fas fa-mug-hot"></i></h1>
+                                <p class="menu-welcome-text">Menümüze Hoş Geldiniz</p>
+                            </div>
+                            <div class="menu-category-section">
+                                <h2 class="category-title">Kahveler</h2>
+                                <div class="menu-item">
+                                    <p class="item-name">Espresso</p>
+                                    <p class="item-price">₺25,00</p>
+                                </div>
+                                <div class="menu-item">
+                                    <p class="item-name">Latte</p>
+                                    <p class="item-price">₺35,00</p>
+                                </div>
+                                <div class="menu-item">
+                                    <p class="item-name">Filtre Kahve</p>
+                                    <p class="item-price">₺32,00</p>
+                                </div>
+                            </div>
+                            <div class="menu-category-section">
+                                <h2 class="category-title">Tatlılar</h2>
+                                <div class="menu-item">
+                                    <p class="item-name">Cheesecake</p>
+                                    <p class="item-price">₺45,00</p>
+                                </div>
+                                <div class="menu-item">
+                                    <p class="item-name">Brownie</p>
+                                    <p class="item-price">₺40,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <!-- GÖRÜNÜM 5: SİPARİŞ AKIŞI (KANBAN) EKRANI -->
+        <section class="view view-hidden" id="siparis-akisi-view">
+            <div class="kanban-header-premium">
+                <div class="kanban-title-group">
+                    <h2 class="kanban-title"><i class="fas fa-chart-line"></i> Sipariş Akışı</h2>
+                    <p class="kanban-subtitle">Aktif siparişleri durumlarına göre takip edin</p>
+                </div>
+                <div class="kanban-actions">
+                    <div class="search-bar-premium">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Müşteri, Sipariş No, Masa Ara...">
+                    </div>
+                    <button class="btn-filter-premium"><i class="fas fa-filter"></i> Filtrele</button>
+                    <button class="btn-new-order-premium"><i class="fas fa-plus"></i> Yeni Sipariş</button>
+                </div>
+            </div>
+            <!-- Eklenecek Kod Bloğu -->
+            <div class="sort-container-premium">
+                <i class="fas fa-sort-amount-down"></i>
+                <select id="kanban-sort-select">
+                    <option value="default">Sıralama Ölçütü</option>
+                    <option value="price-asc">Fiyata Göre (Artan)</option>
+                    <option value="price-desc">Fiyata Göre (Azalan)</option>
+                    <option value="urgent">Aciliyete Göre</option>
+                    <option value="id-asc">Sipariş No'ya Göre</option>
+                </select>
+            </div>
+
+            <div class="kanban-board-premium">
+                <!-- Sütun 1: Yeni Siparişler -->
+                <div class="kanban-column-premium status-new">
+                    <div class="kanban-column-header">
+                        <div class="header-content">
+                            <i class="fas fa-bell header-icon"></i>
+                            <span class="column-title">Yeni Siparişler</span>
+                        </div>
+                        <span class="item-count">2</span>
+                    </div>
+                    <div class="kanban-cards-container">
+                        <!-- Örnek Kart 1 -->
+                        <div class="kanban-card-premium">
+                            <div class="card-header">
+                                <span class="order-type">GEL-AL <span class="order-id">#1234</span></span>
+                                <i class="fas fa-flag urgent-flag"></i>
+                            </div>
+                            <div class="card-body">
+                                <p class="products-title">Ürünler:</p>
+                                <p class="products-list">1x Soğuk Kahve, 2x Cheesecake</p>
+                                <div class="card-note">geciktirildi Personel ugvy</div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="card-price">₺56.00</span>
+                                <div class="card-actions">
+                                    <button class="card-action-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="card-action-btn"><i class="fas fa-print"></i></button>
+                                    <button class="card-action-btn open-modal-btn"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Örnek Kart 2 -->
+                         <div class="kanban-card-premium">
+                            <div class="card-header">
+                                <span class="order-type">MASA 32 <span class="order-id">#9235</span></span>
+                                <i class="fas fa-flag urgent-flag"></i>
+                            </div>
+                            <div class="card-body">
+                                <p class="products-title">Ürünler:</p>
+                                <p class="products-list">1x Sıcacık Kahve</p>
+                                <div class="card-note">geciktirildi Personel hdy</div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="card-price">₺35.00</span>
+                                <div class="card-actions">
+                                    <button class="card-action-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="card-action-btn"><i class="fas fa-print"></i></button>
+                                    <button class="card-action-btn open-modal-btn"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sütun 2: Hazırlanıyor -->
+                <div class="kanban-column-premium status-preparing">
+                    <div class="kanban-column-header">
+                         <div class="header-content">
+                            <i class="fas fa-hourglass-half header-icon"></i>
+                            <span class="column-title">Hazırlanıyor</span>
+                        </div>
+                        <span class="item-count">1</span>
+                    </div>
+                     <div class="kanban-cards-container">
+                        <div class="kanban-card-premium">
+                            <div class="card-header">
+                                <span class="order-type">ZCBJN0ZXB <span class="order-id">#1235</span></span>
+                               <i class="fas fa-flag"></i>
+                            </div>
+                            <div class="card-body">
+                                <p class="products-title">Ürünler:</p>
+                                <p class="products-list">1x Tavuk Sote</p>
+                                <div class="card-note"></div>
+                            </div>
+                            <div class="card-footer">
+                                <span class="card-price">₺120.00</span>
+                               <div class="card-actions">
+                                    <button class="card-action-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="card-action-btn"><i class="fas fa-print"></i></button>
+                                    <button class="card-action-btn open-modal-btn"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sütun 3: Teslimatta -->
+                <div class="kanban-column-premium status-delivery">
+                    <div class="kanban-column-header">
+                        <div class="header-content">
+                            <i class="fas fa-truck header-icon"></i>
+                            <span class="column-title">Teslimatta</span>
+                        </div>
+                        <span class="item-count">1</span>
+                    </div>
+                    <div class="kanban-cards-container">
+                        <div class="kanban-card-premium">
+                             <div class="card-header">
+                                <span class="order-type">Paket Sipariş <span class="order-id">#1112</span></span>
+                               <i class="fas fa-flag urgent-flag"></i>
+                            </div>
+                             <div class="card-body">
+                                <p class="products-title">Ürünler:</p>
+                                <p class="products-list">1x dawdasda</p>
+                                 <div class="card-note">dwadaw</div>
+                            </div>
+                             <div class="card-footer">
+                                <span class="card-price">₺34.00</span>
+                               <div class="card-actions">
+                                    <button class="card-action-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="card-action-btn"><i class="fas fa-print"></i></button>
+                                    <button class="card-action-btn open-modal-btn"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sütun 4: Tamamlandı / Ödendi -->
+                <div class="kanban-column-premium status-completed">
+                    <div class="kanban-column-header">
+                         <div class="header-content">
+                            <i class="fas fa-check-circle header-icon"></i>
+                            <span class="column-title">Tamamlandı / Ödendi</span>
+                        </div>
+                        <span class="item-count">1</span>
+                    </div>
+                     <div class="kanban-cards-container">
+                        <div class="kanban-card-premium">
+                             <div class="card-header">
+                                <span class="order-type">Paket Sipariş <span class="order-id">#1113</span></span>
+                               <i class="fas fa-flag"></i>
+                            </div>
+                             <div class="card-body">
+                                <p class="products-title">Ürünler:</p>
+                                <p class="products-list">1x dwadsad</p>
+                                <div class="card-note">dwad</div>
+                            </div>
+                             <div class="card-footer">
+                                <span class="card-price">₺23.00</span>
+                                <div class="card-actions">
+                                    <button class="card-action-btn"><i class="fas fa-pencil-alt"></i></button>
+                                    <button class="card-action-btn"><i class="fas fa-print"></i></button>
+                                    <button class="card-action-btn open-modal-btn"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    
+    <!-- MODAL BÖLÜMÜ -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    
+    <!-- Yeni Kategori Ekle Modalı -->
+    <div class="modal" id="add-category-modal">
+        <div class="modal-header">
+            <h3>Yeni Kategori Ekle</h3>
+            <i class="fas fa-times modal-close-btn"></i>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="category-name">Kategori Adı</label>
+                    <input type="text" id="category-name" placeholder="Kategori adını girin...">
+                </div>
+                <button type="submit" class="btn btn-modal-save"><i class="fas fa-save"></i> Kategoriyi Kaydet</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Yeni Ürün Ekle Modalı -->
+    <div class="modal" id="add-product-modal">
+        <div class="modal-header">
+            <h3>Yeni Ürün Ekle</h3>
+            <i class="fas fa-times modal-close-btn"></i>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="product-code">* Ürün Kodu</label>
+                        <input type="text" id="product-code" placeholder="Ürün kodunu girin">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-location">Konum'u</label>
+                        <input type="text" id="product-location" placeholder="Örn: Raf 3, Bölüm A">
+                    </div>
+                     <div class="form-group">
+                        <label for="purchase-price">Alış Fiyatı</label>
+                        <input type="number" id="purchase-price" placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="price-no-vat">Fiyatı (KDV Hariç)</label>
+                        <input type="number" id="price-no-vat" placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="price-with-vat">Fiyatı (KDV Dahil)</label>
+                        <input type="number" id="price-with-vat" placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-unit">Birimi</label>
+                        <select id="product-unit">
+                            <option>Lira</option>
+                            <option>Dolar</option>
+                            <option>Euro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vat-rate">KDV Oranı</label>
+                        <select id="vat-rate">
+                            <option>--- Yok ---</option>
+                            <option value="1">%1</option>
+                            <option value="8">%8</option>
+                            <option value="18">%18</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stock-quantity">Stok Adedi</label>
+                        <input type="number" id="stock-quantity" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="min-order-quantity">Asgari Sipariş Miktarı</label>
+                        <input type="number" id="min-order-quantity" value="1">
+                    </div>
+                     <div class="form-group">
+                        <label for="deduct-stock">Stoktan Düş</label>
+                        <select id="deduct-stock">
+                            <option>Evet</option>
+                            <option>Hayır</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="out-of-stock-status">Stok Dışı Durumu</label>
+                        <select id="out-of-stock-status">
+                            <option>Stok Tükendi</option>
+                            <option>Ön Sipariş</option>
+                            <option>Yakında Gelecek</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-modal-save"><i class="fas fa-save"></i> Ürünü Kaydet</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Yeni Masa Ekle Modalı -->
+    <div class="modal" id="add-table-modal">
+        <div class="modal-header">
+            <h3>Yeni Masa Ekle</h3>
+            <i class="fas fa-times modal-close-btn"></i>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="table-name">Masa Adı</label>
+                        <input type="text" id="table-name" placeholder="Örn: Masa B6">
+                    </div>
+                    <div class="form-group">
+                        <label for="table-region">Bölge</label>
+                        <select id="table-region">
+                            <option value="deneme">Bahçe Alanı</option>
+                            <option value="ornek">İç Mekan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="region-toggle-buttons">
+                            <button type="button" class="region-toggle-btn active" data-region-view="active">Seçili Bölge</button>
+                            <button type="button" class="region-toggle-btn" data-region-view="all">Tüm Mekan</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="table-capacity">Kapasite</label>
+                        <select id="table-capacity">
+                            <option value="1">1 Kişilik</option>
+                            <option value="2">2 Kişilik</option>
+                            <option value="4" selected>4 Kişilik</option>
+                            <option value="6">6 Kişilik</option>
+                            <option value="8">8 Kişilik</option>
+                            <option value="10">10 Kişilik</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="table-shape">Masa Şekli</label>
+                        <select id="table-shape">
+                            <option value="square">Kare</option>
+                            <option value="round">Yuvarlak</option>
+                            <option value="rectangle">Dikdörtgen</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Kroki Yerleşimi</label>
+                    <div class="layout-position-selector">
+                        <div class="position-preview" id="position-preview">
+                            <div class="position-grid">
+                                <!-- Grid içi dinamik olarak doldurulabilir -->
+                            </div>
+                            
+                            <!-- Bölge görünümleri -->
+                            <div class="region-preview-container">
+                                <!-- Tüm mekan görünümü -->
+                                <div class="region-preview" id="region-all">
+                                    <!-- Bölge ayrımı için çizgi -->
+                                    <div class="preview-divider"></div>
+                                    <div class="preview-label preview-label-left">Bahçe</div>
+                                    <div class="preview-label preview-label-right">İç Mekan</div>
+                                    
+                                    <!-- Bahçe masaları -->
+                                    <div class="preview-table" data-region="deneme" style="top: 5%; left: 10%;" title="Masa B1"></div>
+                                    <div class="preview-table" data-region="deneme" style="top: 25%; left: 20%;" title="Masa B2"></div>
+                                    <div class="preview-table" data-region="deneme" style="top: 5%; left: 40%;" title="Masa B3"></div>
+                                    <div class="preview-table" data-region="deneme" style="top: 50%; left: 10%;" title="Masa B4"></div>
+                                    <div class="preview-table" data-region="deneme" style="top: 70%; left: 30%;" title="Masa B5"></div>
+                                    
+                                    <!-- İç mekan masaları -->
+                                    <div class="preview-table" data-region="ornek" style="top: 20%; left: 70%;" title="Masa I1"></div>
+                                    <div class="preview-table" data-region="ornek" style="top: 45%; left: 65%;" title="Masa I2"></div>
+                                    <div class="preview-table" data-region="ornek" style="top: 45%; left: 80%;" title="Masa I3"></div>
+                                    <div class="preview-table" data-region="ornek" style="top: 75%; left: 60%;" title="Masa I4"></div>
+                                </div>
+                                
+                                <!-- Bahçe görünümü -->
+                                <div class="region-preview active" id="region-deneme">
+                                    <div class="preview-label preview-label-center">Bahçe Alanı</div>
+                                    
+                                    <!-- Bahçe masaları (daha merkezi yerleştirilmiş) -->
+                                    <div class="preview-table" style="top: 20%; left: 25%;" title="Masa B1"></div>
+                                    <div class="preview-table" style="top: 40%; left: 50%;" title="Masa B2"></div>
+                                    <div class="preview-table" style="top: 20%; left: 75%;" title="Masa B3"></div>
+                                    <div class="preview-table" style="top: 70%; left: 30%;" title="Masa B4"></div>
+                                    <div class="preview-table" style="top: 70%; left: 70%;" title="Masa B5"></div>
+                                </div>
+                                
+                                <!-- İç mekan görünümü -->
+                                <div class="region-preview" id="region-ornek">
+                                    <div class="preview-label preview-label-center">İç Mekan</div>
+                                    
+                                    <!-- İç mekan masaları (daha merkezi yerleştirilmiş) -->
+                                    <div class="preview-table" style="top: 20%; left: 30%;" title="Masa I1"></div>
+                                    <div class="preview-table" style="top: 45%; left: 50%;" title="Masa I2"></div>
+                                    <div class="preview-table" style="top: 20%; left: 70%;" title="Masa I3"></div>
+                                    <div class="preview-table" style="top: 70%; left: 50%;" title="Masa I4"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Yeni masa pozisyonu -->
+                            <div class="new-table-preview" id="new-table-marker">Yeni</div>
+                            <div class="preview-click-overlay" id="preview-click-area"></div>
+                        </div>
+                        <div class="position-controls">
+                            <div class="control-group">
+                                <label for="position-x">X Konumu (%)</label>
+                                <input type="range" id="position-x" min="5" max="95" value="50">
+                                <span class="range-value">50%</span>
+                            </div>
+                            <div class="control-group">
+                                <label for="position-y">Y Konumu (%)</label>
+                                <input type="range" id="position-y" min="5" max="95" value="50">
+                                <span class="range-value">50%</span>
+                            </div>
+                            <div class="position-info">
+                                <span class="position-hint"><i class="fas fa-info-circle"></i> Krokiye tıklayarak masa konumunu doğrudan seçebilirsiniz.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-modal-save"><i class="fas fa-plus"></i> Masa Ekle</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Bölgeyi Düzenle Modalı -->
+    <div class="modal" id="edit-region-modal">
+        <div class="modal-header">
+            <h3>Bölgeyi Düzenle</h3>
+            <i class="fas fa-times modal-close-btn"></i>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="region-tabs-modal">
+                    <div class="region-tab-item active" data-modal-region="deneme">Bahçe Alanı <span class="region-edit-icon"><i class="fas fa-pencil-alt"></i></span></div>
+                    <div class="region-tab-item" data-modal-region="ornek">İç Mekan <span class="region-edit-icon"><i class="fas fa-pencil-alt"></i></span></div>
+                    <div class="region-tab-item add-region"><i class="fas fa-plus"></i> Yeni Bölge</div>
+                </div>
+                
+                <div class="form-group region-edit-form active" data-modal-region-form="deneme">
+                    <label for="region-name-deneme">Bölge Adı</label>
+                    <input type="text" id="region-name-deneme" value="Bahçe Alanı">
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-modal-delete"><i class="fas fa-trash-alt"></i> Bölgeyi Sil</button>
+                        <button type="button" class="btn btn-modal-update"><i class="fas fa-save"></i> Güncelle</button>
+                    </div>
+                </div>
+                
+                <div class="form-group region-edit-form" data-modal-region-form="ornek">
+                    <label for="region-name-ornek">Bölge Adı</label>
+                    <input type="text" id="region-name-ornek" value="İç Mekan">
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-modal-delete"><i class="fas fa-trash-alt"></i> Bölgeyi Sil</button>
+                        <button type="button" class="btn btn-modal-update"><i class="fas fa-save"></i> Güncelle</button>
+                    </div>
+                </div>
+                
+                <div class="form-group region-edit-form" data-modal-region-form="new">
+                    <label for="region-name-new">Yeni Bölge Adı</label>
+                    <input type="text" id="region-name-new" placeholder="Örn: Teras, VIP Salon vb.">
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-modal-save"><i class="fas fa-plus"></i> Bölge Ekle</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+ <!-- Sipariş Detay Modalı -->
+    <div class="modal" id="order-details-modal">
+        <div class="modal-header">
+            <h3>Sipariş Detayları (<span id="modal-order-id"></span>)</h3>
+            <i class="fas fa-times modal-close-btn"></i>
+        </div>
+        <div class="modal-body">
+            <p><strong>Sipariş Türü:</strong> <span id="modal-order-type"></span></p>
+            <p><strong>Ürünler:</strong> <span id="modal-order-products"></span></p>
+            <p><strong>Tutar:</strong> <span id="modal-order-price"></span></p>
+            <p><strong>Not:</strong> <span id="modal-order-note"></span></p>
+            <div class="form-actions">
+                 <button type="button" class="btn btn-modal-delete"><i class="fas fa-times-circle"></i> Siparişi İptal Et</button>
+                 <button type="button" class="btn btn-modal-update"><i class="fas fa-check-circle"></i> Durumu Güncelle</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SWIPER JS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- ÖZEL JS DOSYASI -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
