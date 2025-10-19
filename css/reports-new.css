@@ -1,0 +1,579 @@
+/* YENİ RAPORLAR EKRANI CSS */
+
+/* Genel sayfa düzeni */
+.sales-report-page {
+    padding: 3rem 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: calc(100vh - 8rem);
+    position: relative;
+}
+
+.sales-container {
+    width: 100%;
+    overflow-x: visible;
+}
+
+/* Başlık Bölümü */
+.sales-analysis-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.08);
+}
+
+.sales-analysis-header .header-icon {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    background-color: #f8f4f1;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.sales-analysis-header .header-text h2 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.sales-analysis-header .header-text p {
+    font-size: 1.4rem;
+    color: #777;
+}
+
+.sales-analysis-header .header-actions {
+    display: flex;
+    gap: 1.2rem;
+}
+
+/* Filtreler */
+.report-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.08);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-size: 1.3rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    min-width: 15rem;
+}
+
+.filter-group input[type="date"] {
+    min-width: 18rem;
+}
+
+.filter-actions {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+/* Özet Kartları */
+.sales-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.table-card-premium.sales-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.table-card-premium.sales-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.sales-card-icon {
+    font-size: 2.4rem;
+    color: white;
+    min-width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--main-color), #665544);
+    box-shadow: 0 0.3rem 0.8rem rgba(0,0,0,0.1);
+    margin-right: 1.5rem;
+}
+
+.sales-card-content {
+    flex-grow: 1;
+}
+
+.sales-title {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+}
+
+.sales-card-value {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.sales-card-change {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.sales-card-change.positive {
+    color: var(--green);
+}
+
+.sales-card-change.negative {
+    color: var(--red);
+}
+
+/* Ana İçerik Düzeni */
+.sales-content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.sales-panel {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.08);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.sales-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.sales-panel-header h3 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+}
+
+.sales-panel-header h3 i {
+    margin-right: 1rem;
+}
+
+.sales-panel-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Grafik Kartları */
+.sales-chart-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.sales-chart-card h4 {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 1rem;
+}
+
+.sales-chart-card h4 i {
+    margin-right: 1rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.sales-chart-placeholder {
+    min-height: 25rem;
+    background-color: #fbfbfb;
+    border-radius: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Satış Tablosu */
+.sales-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1.4rem;
+}
+
+.sales-table thead th {
+    background-color: #f5f5f5;
+    color: var(--main-color);
+    font-weight: 500;
+    text-align: left;
+    padding: 1.5rem;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.sales-table thead th:first-child {
+    border-top-left-radius: 0.5rem;
+}
+
+.sales-table thead th:last-child {
+    border-top-right-radius: 0.5rem;
+}
+
+.sales-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.sales-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.sales-table tbody td {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+/* Sayfalama */
+.sales-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+/* Top Ürünler Tablosu */
+.top-products-table {
+    width: 100%;
+}
+
+.top-products-table th,
+.top-products-table td {
+    padding: 1.2rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.top-products-table th {
+    background-color: #f5f5f5;
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.product-bar-container {
+    height: 0.8rem;
+    background-color: #f1f1f1;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.product-bar {
+    height: 100%;
+    border-radius: 0.4rem;
+    animation: growProductBar 1.5s ease-out forwards;
+    transform-origin: left;
+    background: linear-gradient(45deg, var(--main-color), #665544);
+}
+
+@keyframes growProductBar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Doughnut Chart */
+.doughnut-chart-container {
+    position: relative;
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doughnut-chart {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--main-color) 0% 30%,
+        #3498db 30% 55%,
+        #2ecc71 55% 70%,
+        #f39c12 70% 85%,
+        #9b59b6 85% 100%
+    );
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.doughnut-chart::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0.3rem 0.8rem rgba(0,0,0,0.1);
+}
+
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-color {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.2rem;
+    margin-right: 0.8rem;
+}
+
+.legend-text {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+.legend-color.color1 { background-color: var(--main-color); }
+.legend-color.color2 { background-color: #3498db; }
+.legend-color.color3 { background-color: #2ecc71; }
+.legend-color.color4 { background-color: #f39c12; }
+.legend-color.color5 { background-color: #9b59b6; }
+
+/* Bar Grafik */
+.bar-chart-container {
+    position: relative;
+    min-height: 25rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 6rem;
+}
+
+.bar {
+    width: 4rem;
+    background: linear-gradient(to top, var(--main-color), #665544);
+    border-radius: 0.4rem 0.4rem 0 0;
+    margin-bottom: 1rem;
+    transition: height 1.5s ease;
+}
+
+.bar-label {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Line Grafik */
+.line-chart-container {
+    position: relative;
+    min-height: 25rem;
+    padding: 2rem;
+}
+
+.line-chart {
+    position: relative;
+    height: 20rem;
+    background-color: #fbfbfb;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.line-path {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(transparent, rgba(68, 51, 51, 0.1));
+    clip-path: polygon(
+        0 100%,
+        5% 80%,
+        10% 70%,
+        15% 85%,
+        20% 65%,
+        25% 75%,
+        30% 60%,
+        35% 70%,
+        40% 55%,
+        45% 65%,
+        50% 45%,
+        55% 55%,
+        60% 40%,
+        65% 50%,
+        70% 35%,
+        75% 45%,
+        80% 30%,
+        85% 40%,
+        90% 25%,
+        95% 35%,
+        100% 20%
+    );
+}
+
+.line-path::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(68, 51, 51, 0.4), transparent);
+    animation: lineShimmer 3s infinite;
+}
+
+@keyframes lineShimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.chart-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.axis-label {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 1400px) {
+    .sales-summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .sales-content-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .report-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-actions {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .sales-report-page {
+        padding: 2rem;
+    }
+    
+    .sales-analysis-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .sales-analysis-header .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .sales-summary-cards {
+        grid-template-columns: 1fr;
+    }
+}
